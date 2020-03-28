@@ -1,0 +1,45 @@
+.wrapper {
+    background: linear-gradient(0deg, rgba(21, 4, 51, 0.5), rgba(21, 4, 51, 0.5)), #30233D;
+    opacity: 0.9;
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(0, 240, 181, 0.1);
+    border: 1px solid rgba(0, 240, 181, 0.25);
+    box-sizing: border-box;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+}
+
+.title {
+    color: #00F0B5;
+    font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 71px;
+}
+
+.description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 163.35%;
+    color: #FCFCFC;
+}
+

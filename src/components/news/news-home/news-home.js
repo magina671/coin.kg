@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import NewsItem from "../news-item";
-import "./news-home.css";
+import styles from "./news-home.module.css";
 
 const HomeNews = props => {
   return (
-    <div className="home__news__container">
-      <div className="home__news__header">
+    <div className={styles.wrapper}>
+      {/* news */}
+      {/* <div className="">
         <div >
           <span>Новости</span>
           <button>Все новости</button>
         </div>
       </div>
 
-      <div className="home_news_wrapper">
+      <div className="">
         <NewsItem />
-      </div>
+      </div> */}
     </div>
   );
 };

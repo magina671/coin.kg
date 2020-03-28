@@ -1,0 +1,83 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    position: relative;
+}
+
+.intro_header {
+    color: #F61067;
+    font-weight: 900;
+    font-size: 12.6px;
+    line-height: 207.9%;
+    display: flex;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+}
+
+.intro_desc {
+    color: #5E239D;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    width: 800px;
+}
+
+.statistics {
+    height: 100px;
+    background: linear-gradient(0deg, rgba(21, 4, 51, 0.5), rgba(21, 4, 51, 0.5)), #30233D;
+    opacity: 0.9;
+    position: relative;
+}
+
+.stat_content {
+    position: absolute;
+    height: 100;
+    display: flex;
+    margin: -62px 0;
+    justify-content: space-evenly;
+}
+
+.stat_content_list {
+    display: flex;
+    min-width: 1340px;
+    justify-content: space-evenly;
+}
+
+.stat_content p {
+    font-weight: 900;
+    font-size: 99px;
+    line-height: 118px;
+    text-align: center;
+    color: #F61067;
+}
+
+.stat_content div:nth-child(2) p {
+    color: #A48EBB;
+}
+
+.stat_content div:nth-child(3) p {
+    color: #00F0B5;
+}
+
+.stat_content span {
+    color: #FCFCFC;
+    font-weight: 800;
+    font-size: 12.6px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}

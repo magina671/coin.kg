@@ -46,6 +46,9 @@ const Autorization = () => {
               </Link>
             </span>
           </div>
+          <Link to="/registration" style={{textDecoration: 'none'}}>
+            <p className='regisrt'> Зарегистрироваться </p>
+          </Link>
         </form>
       </div>
     </div>

@@ -1,0 +1,119 @@
+.wrapper {
+    background-size: 1366px !important;
+    background-size: cover;
+    background: url('../../../images/header-background.png') no-repeat;
+    width: 100%;
+    height: 619px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.top_wrapper {
+    display: flex;
+    color: white;
+    height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.list {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 700px;
+    justify-content: space-evenly;
+}
+
+.list li {
+    cursor: pointer;
+}
+
+.flags{
+    display: flex;
+    width: 200px;
+}
+.flags img{
+    width: 40px;
+    height: 40px;
+    padding: 0 4px;
+}
+
+.login {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    width: 120px;
+    height: 37px;
+    font-size: 20px;
+    background: #5E239D;
+    border-radius: 36px;
+    cursor: pointer;
+}
+.content_wrapper{
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 200px;
+    left: 100px;
+}
+.content{
+    font-family: 'Montserrat';
+}
+.content p:nth-child(1){
+    font-size: 96px;
+    font-weight: 900;
+    color: white;
+}
+.content p:nth-child(2){
+    font-size: 90px;
+    font-weight: 300;
+    color: #f61067;
+}
+.online_request{
+    display: flex;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    height: 57px;
+    width: 700px;
+    position: absolute;
+    top: 400px;
+    justify-content: center;
+    align-items: center;    
+}
+.online_request span{
+    color: white;
+    font-size: 21px;
+    letter-spacing: 0.45em;
+    margin-right: 40px;
+
+}
+.arrow{
+    border: 1px solid white;
+    font-size: 30px;
+    color: white;
+    border-radius: 50%;
+    font-weight: 800;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px 4px 4px;
+    position: absolute;
+    right: 30px;
+}
+.arrow:hover{
+    background: black;
+    cursor: pointer;
+}
