@@ -4,6 +4,9 @@ import style from "./home.module.css";
 import API from "../../API";
 import HomeHeader from "./home-header";
 import CreditInfo from "./credit-info";
+import HelpForm from "./help-form";
+import Footer from '../footer';
+
 
 const Home = props => {
   const [news, setNews] = useState([]);
@@ -41,7 +44,9 @@ const Home = props => {
         </div>
       </div>
       <CreditInfo />
-      {/* <HomeNews {...props}/> */}
+      <HomeNews {...props}/>
+      <HelpForm />
+      {/* <Footer /> */}
     </div>
   );
 };

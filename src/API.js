@@ -6,7 +6,7 @@ const http = Axios.create({
 
 export default {
   getCreditsInfo: () => http.get('/api/main/creditsinfo/'),
-  getNews: () => http.get(""),
+  getNews: () => http.get('/api/main/news/'),
   postData: (url, data) =>
     http.post(`${url}`, data, {
       headers: {
@@ -15,3 +15,16 @@ export default {
       }
     })
 };
+
+// async function getData(url) {
+//   let response = await fetch(`${url}`, {
+//     method: "GET",
+//     headers: {
+//       Accept: "application/json",
+//       Authorization: "Bearer " + token,
+//       "Content-Type": "application/json"
+//     }
+//   });
+//   let body = await response.json();
+//   return body;
+// }

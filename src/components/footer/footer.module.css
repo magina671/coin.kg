@@ -1,0 +1,24 @@
+.wrapper{
+    height: 350px;
+    background: #150433;
+    width: 100%;
+    display: flex;
+}
+.logo{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 178.2%;
+    letter-spacing: 2px;
+    color: #FCFCFC;
+    width: 20%;
+    height: 100%;
+}
+.logo p{
+    padding: 30px 0 0 90px;
+}
+.references{
+    
+}
+.title{
+    
+}

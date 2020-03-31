@@ -5,6 +5,7 @@ import NotFound from './components/404';
 import Registration from './components/registration';
 import Autorization from './components/autorization';
 import Home from './components/home';
+import CreditInfo from './components/pages/credit-info';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/registration" component={Registration} />
           <Route path="/autorization" component={Autorization} />
+          <Route path="/credit/:id" component={CreditInfo} />
           <Route path='*' component={NotFound} />
         </Switch>
       </div>

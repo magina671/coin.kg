@@ -4,6 +4,7 @@
 }
 
 .content_wrapper {
+    padding: 30px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,16 +31,17 @@
 .title {
     color: #00F0B5;
     font-style: normal;
-font-weight: 500;
-font-size: 40px;
-line-height: 71px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 71px;
 }
 
 .description {
+    padding: 10px 0;
+    width: 900px;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
-    line-height: 163.35%;
+    line-height: 110%;
     color: #FCFCFC;
 }
-

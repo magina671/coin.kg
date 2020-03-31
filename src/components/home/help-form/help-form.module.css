@@ -1,0 +1,86 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    background: #150433;
+    height: 400px;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    color: #FCFCFC;
+    height: 100px;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 40px;
+    align-items: center;
+    padding: 20px 0 0 50px;
+}
+
+.list form {
+    display: flex;
+    justify-content: space-evenly;
+    height: 250px;
+}
+
+.list form input,
+.list form textarea {
+    padding: 10px;
+}
+
+.list form textarea {}
+
+.list span {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FCFCFC;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.info input {
+    margin: 10px 0 23px 0;
+}
+
+.problem {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.problem span{
+    margin: 0 0 20px 0;
+}
+
+.problem button {
+    margin: 20px 0 20px 20%;
+    border: none;
+    font-weight: 500;
+    font-size: 13.5px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    background: #F61067;
+    border-radius: 36px;
+    width: 200px;
+    height: 35px;
+}

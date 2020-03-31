@@ -1,0 +1,41 @@
+.wrapper {
+    width: 550px;
+    display: flex;
+    margin: 50px 60px 0 60px;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    
+}
+
+.content {
+    padding: 20px 0 10px 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #3A0475;
+    max-height: 160px;
+    overflow: hidden;
+
+}
+
+.views {
+    position: absolute;
+    bottom: 0;
+    color: #ABABAB;
+    font-size: 16px;
+    left: 10px;
+}
+
+.date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #484848;
+    font-size: 20px;
+    font-family: 'Baloo Thambi 2', cursive;
+}
