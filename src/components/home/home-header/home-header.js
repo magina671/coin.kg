@@ -6,12 +6,14 @@ import russian from "../../../images/russia.svg";
 import kyrg from "../../../images/kyrgyzstan.svg";
 import Header from "../../header";
 
- export const HeaderContent = () => {
+export const HeaderContent = () => {
   return (
     <div className={style.top_wrapper}>
       <p className={style.logo}>COIN.KG</p>
       <ul className={style.list}>
-        <li>Главная страница</li>
+        <Link to='/' style={{textDecoration: 'none', color: 'white'}}>
+          <li>Главная страница</li>
+        </Link>
         <li>Кредиты</li>
         <li>Новости</li>
         <li>О нас</li>
@@ -30,7 +32,6 @@ import Header from "../../header";
 
 const HomeHeader = props => {
   return (
-    
     <div className={style.wrapper}>
       <HeaderContent />
       <div className={style.content_wrapper}>

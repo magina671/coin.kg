@@ -4,7 +4,6 @@ import newsImage from '../../../images/news-1.png';
 
 const NewsItem = (props) => {
   const {data} = props;
-  console.log("NewsItem -> data", data)
   return (
     <div className={styles.wrapper}>
       <img src={newsImage} alt="news_item" />
