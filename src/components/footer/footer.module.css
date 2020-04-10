@@ -1,24 +1,57 @@
-.wrapper{
+.wrapper {
     height: 350px;
     background: #150433;
     width: 100%;
     display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    font-family: 'Montserrat';
 }
-.logo{
+
+.logo {
     font-weight: 900;
     font-size: 36px;
-    line-height: 178.2%;
     letter-spacing: 2px;
     color: #FCFCFC;
-    width: 20%;
-    height: 100%;
+    width: 200px;
+    height: 20%;
 }
-.logo p{
+
+.logo p {
     padding: 30px 0 0 90px;
 }
-.references{
-    
+
+.menu{
+    cursor: pointer;
 }
-.title{
-    
+
+.references {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 800;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 2px;
+}
+
+.hr {
+    border: none;
+    height: 2px;
+    width: 100px;
+    background: #F61067;
+    color: #F61067;
+    line-height: 0;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
 }

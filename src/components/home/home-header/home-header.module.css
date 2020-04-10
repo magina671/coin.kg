@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Libre+Baskerville');
+
 .wrapper {
     background-size: 1366px !important;
     background-size: cover;
@@ -39,11 +41,12 @@
     cursor: pointer;
 }
 
-.flags{
+.flags {
     display: flex;
     width: 200px;
 }
-.flags img{
+
+.flags img {
     width: 40px;
     height: 40px;
     padding: 0 4px;
@@ -61,27 +64,32 @@
     border-radius: 36px;
     cursor: pointer;
 }
-.content_wrapper{
+
+.content_wrapper {
     display: block;
     position: absolute;
     height: 100%;
     top: 200px;
     left: 100px;
 }
-.content{
+
+.content {
     font-family: 'Montserrat';
 }
-.content p:nth-child(1){
+
+.content p:nth-child(1) {
     font-size: 96px;
     font-weight: 900;
     color: white;
 }
-.content p:nth-child(2){
+
+.content p:nth-child(2) {
     font-size: 90px;
     font-weight: 300;
     color: #f61067;
 }
-.online_request{
+
+.online_request {
     display: flex;
     border: 2px solid rgba(255, 255, 255, 0.25);
     height: 57px;
@@ -89,16 +97,18 @@
     position: absolute;
     top: 400px;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
-.online_request span{
+
+.online_request span {
     color: white;
     font-size: 21px;
     letter-spacing: 0.45em;
     margin-right: 40px;
 
 }
-.arrow{
+
+.arrow {
     border: 1px solid white;
     font-size: 30px;
     color: white;
@@ -112,8 +122,10 @@
     padding: 0 4px 4px 4px;
     position: absolute;
     right: 30px;
+    top: 9px;
 }
-.arrow:hover{
+
+.arrow:hover {
     background: black;
     cursor: pointer;
 }

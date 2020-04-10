@@ -1,0 +1,47 @@
+.wrapper {}
+
+.content_wrapper {
+    position: relative;
+    background: #150433;
+    height: 900px;
+    z-index: 0;
+}
+
+.white_box {
+    display: flex;
+    width: 100%;
+    height: 520px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: white;
+}
+
+.pink_image {
+    /* display: flex;   */
+    width: 610px;
+    height: 520px;
+    background:  url('../../../images/online_request.png') no-repeat;
+   
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.pink_image_color{
+    background-color:  rgba(246, 16, 103, 0.75);
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    left: 230px;
+    top: 160px;
+    background: #1E0B3F;
+    width: 900px;
+    height: 610px;
+    z-index: 10;
+    display: flex;
+}

@@ -6,6 +6,9 @@ import Registration from './components/registration';
 import Autorization from './components/autorization';
 import Home from './components/home';
 import CreditInfo from './components/pages/credit-info';
+import AboutUs from './components/pages/about-us';
+import Footer from './components/footer';
+import OnlineRequest from './components/pages/online-request';
 
 function App() {
   return (
@@ -16,8 +19,11 @@ function App() {
           <Route path="/registration" component={Registration} />
           <Route path="/autorization" component={Autorization} />
           <Route path="/credit/:id" component={CreditInfo} />
+          <Route path="/about_us" component={AboutUs} />
+          <Route path="/online_request" component={OnlineRequest} />
           <Route path='*' component={NotFound} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

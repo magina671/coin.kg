@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./credit-info.module.css";
 import Header from "../../header";
-import Footer from "../../footer";
 import jsonData from "./content/db.json";
 
 const CreditInfo = props => {
@@ -75,7 +74,6 @@ const CreditInfo = props => {
           className={style.bottomImage}
         />
       </div>
-      <Footer />
     </div>
   );
 };
