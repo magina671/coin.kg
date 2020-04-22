@@ -10,31 +10,36 @@ export const HeaderContent = () => {
   return (
     <div className={style.top_wrapper}>
       <p className={style.logo}>COIN.KG</p>
-      <ul className={style.list}>
+      <ul className={style.menu}>
         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-          <li>Главная страница</li>
+          <li className={style.first}>Главная страница</li>
         </Link>
         <li>
           Кредиты
-          {/* <ul className={style.submenu}>
-            <Link style={{ textDecoration: "none", padding: '0', margin: '0' }}>
+          <ul className={style.submenu}>
+            <Link
+              to="/credit/1"
+              style={{ textDecoration: "none", padding: "0", margin: "0" }}
+            >
               <li>Потребительский</li>
             </Link>
-            <Link>
+            <Link to="/credit/2">
               <li>Авто-кредит</li>
             </Link>
-            <Link>
+            <Link to="/credit/3">
               <li>Ипотека</li>
             </Link>
-            <Link>
-              <li>Для развития Бизнеса</li>
+            <Link to="/credit/4">
+              <li>Для развития бизнеса</li>
             </Link>
-            <Link>
+            <Link to="/credit/5">
               <li>Агрокредит</li>
             </Link>
-          </ul> */}
+          </ul>
         </li>
-        <li>Новости</li>
+        <Link to='all_news'  style={{ textDecoration: "none", color: "white" }}>
+          <li>Новости</li>
+        </Link>
         <Link to="/about_us" style={{ textDecoration: "none", color: "white" }}>
           <li>О нас</li>
         </Link>

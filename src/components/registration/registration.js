@@ -48,7 +48,7 @@ const Registration = props => {
 
     console.log(data);
     // postData("/Account/Register", data);
-    // props.history.push('/');
+    props.history.push('/autorization');
   };
 
   return (

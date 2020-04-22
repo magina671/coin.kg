@@ -38,7 +38,7 @@ const CreditInfo = props => {
         setState(credit);
       }
     });
-  }, []);
+  }, [+props.match.params.id]);
   console.log(state);
   
 

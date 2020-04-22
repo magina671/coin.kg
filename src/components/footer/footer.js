@@ -17,7 +17,10 @@ const Footer = () => {
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             <li>Главная страница</li>
           </Link>
-          <Link to="/about_us" style={{ textDecoration: "none", color: "white" }}>
+          <Link
+            to="/about_us"
+            style={{ textDecoration: "none", color: "white" }}
+          >
             <li>О нас</li>
           </Link>
           <li>Новости</li>
@@ -44,7 +47,7 @@ const Footer = () => {
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A896d1d50418f1cc7768da5c0242887aedfbeb6180a1cfe8b59022e538a91c71e&amp;source=constructor"
           width="417"
           height="240"
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
       </div>
     </div>

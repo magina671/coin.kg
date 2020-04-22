@@ -15,21 +15,24 @@
     display: flex;
     color: white;
     height: 60px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: '1mplus', sans-serif;
     position: relative;
     width: 100%;
     align-items: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #FCFCFC;
 }
 
 .logo {
-    margin-left: 120px;
+    margin: 0 60px;
     display: flex;
     align-items: center;
     font-size: 30px;
     font-weight: 700;
 }
 
-.list {
+.menu {
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -37,7 +40,7 @@
     justify-content: space-evenly;
 }
 
-.list li {
+.menu li {
     cursor: pointer;
 }
 
@@ -74,13 +77,14 @@
 }
 
 .content {
-    font-family: 'Montserrat';
+    font-family: '1mplus extraBold';
 }
 
 .content p:nth-child(1) {
     font-size: 96px;
     font-weight: 900;
     color: white;
+    font-style: normal;
 }
 
 .content p:nth-child(2) {
@@ -128,4 +132,67 @@
 .arrow:hover {
     background: black;
     cursor: pointer;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
+.first{
+    width: 200px !important;
+}
+.menu li {
+    list-style: none;
+    float: left;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+
+.menu li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    z-index: 999;
+    padding: 15px 0 0  0;
+}
+
+.menu li ul li {
+    border-radius: 10px;
+
+    float: none;
+    height: 40px;
+    margin: 0;
+    width: 250px;
+    left: -50px;
+    text-align: center;
+    background: #3A0475;
+}
+
+.menu li a {
+    display: block;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li:hover ul li:hover{
+    background: gold;
+    z-index: 2000;
 }

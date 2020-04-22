@@ -1,4 +1,10 @@
-body{
+body {
     margin: 0;
     padding: 0;
+}
+
+.app_wrapper {
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
 }
