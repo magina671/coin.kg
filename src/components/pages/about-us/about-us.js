@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./about-us.module.css";
 import Header from "../../header";
-import Picture1 from '../../../images/about_us_2.png'
-import Picture2 from '../../../images/about_us_1.jpeg'
+import Picture1 from "../../../images/about_us_2.png";
+import Picture2 from "../../../images/about_us_1.jpeg";
 
-export const Title = text => {
+export const Title = (text) => {
   return (
-    <div className={style.title}>
+    <div className={style.title_about_us}>
       <div className={style.title_gradient}>
         <p>{text.text}</p>
       </div>
@@ -45,8 +45,8 @@ const AboutUs = () => {
             жилищных условий и образование.
           </span>
         </div>
-        <img src={Picture1} className={style.picture1} alt='content' />
-        <img src={Picture2} className={style.picture2} alt='content' />
+        <img src={Picture1} className={style.picture1} alt="content" />
+        <img src={Picture2} className={style.picture2} alt="content" />
       </div>
     </div>
   );

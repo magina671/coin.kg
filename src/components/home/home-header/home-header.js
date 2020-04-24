@@ -37,7 +37,7 @@ export const HeaderContent = () => {
             </Link>
           </ul>
         </li>
-        <Link to='all_news'  style={{ textDecoration: "none", color: "white" }}>
+        <Link to='/all_news'  style={{ textDecoration: "none", color: "white" }}>
           <li>Новости</li>
         </Link>
         <Link to="/about_us" style={{ textDecoration: "none", color: "white" }}>

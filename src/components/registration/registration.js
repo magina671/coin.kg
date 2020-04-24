@@ -1,6 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { Link } from "react-router-dom";
-import { API, postData } from "../../API";
+import React, { useState, Fragment } from "react";
+import API  from "../../API";
 import "./registration.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -27,10 +26,10 @@ const RegistrationField = props => {
 const Registration = props => {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
-  const [lastname, setLastname] = useState("");
+  const [patronymic, setPatronymic] = useState("");
   const [address, setAddress] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [login, setLogin] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleEvent = event => {
@@ -39,15 +38,15 @@ const Registration = props => {
     const data = {
       name,
       surname,
-      lastname,
+      patronymic,
       address,
-      phoneNumber,
-      login,
+      phone,
+      email,
       password
     };
 
     console.log(data);
-    // postData("/Account/Register", data);
+    API.postRegistrData(data);
     props.history.push('/autorization');
   };
 
@@ -62,8 +61,8 @@ const Registration = props => {
         />
         <RegistrationField
           labelName="Отчество"
-          setFunc={setLastname}
-          name="lastname"
+          setFunc={setPatronymic}
+          name="patronymic"
         />
         <RegistrationField
           labelName="Адрес"
@@ -77,20 +76,20 @@ const Registration = props => {
           </div>
           <PhoneInput
             inputProps={{
-              name: "phoneNumber",
+              name: "phone",
               required: true
             }}
             country={"kg"}
             className="registInput"
             masks={{ kg: "+... (...) ..-..-.." }}
-            value={phoneNumber}
+            value={phone}
             onChange={e => {
-              setPhoneNumber(e);
+              setPhone(e);
             }}
           />
         </div>
 
-        <RegistrationField labelName="Логин" setFunc={setLogin} name="login" />
+        <RegistrationField labelName="Почта" setFunc={setEmail} name="email" />
         <RegistrationField
           labelName="Пароль"
           setFunc={setPassword}

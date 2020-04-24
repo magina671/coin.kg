@@ -8,7 +8,7 @@ const HomeNews = (props) => {
   const [homeNews, setHomeNews] = useState([]);
   useEffect(() => {
     API.getNews().then((res) => {
-      setHomeNews(res.data);
+      setHomeNews(res.data.results);
     });
   }, []);
 
@@ -25,7 +25,11 @@ const HomeNews = (props) => {
 
       <div className={styles.list}>
         {homeNews.map((item) => {
-          return <NewsItem data={item} />;
+          return (
+            <div className={styles.list_wrapper}>
+              <NewsItem data={item} />
+            </div>
+          );
         })}
       </div>
     </div>

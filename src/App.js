@@ -10,6 +10,7 @@ import AboutUs from './components/pages/about-us';
 import Footer from './components/footer';
 import OnlineRequest from './components/pages/online-request';
 import AllNews from './components/news/all-news/all-news';
+import OneNewsPage from './components/news/one-news-page';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about_us" component={AboutUs} />
           <Route path="/all_news" component={AllNews} />
           <Route path="/online_request" component={OnlineRequest} />
+          <Route path="/one_news/:id" component={OneNewsPage} />
           <Route path='*' component={NotFound} />
         </Switch>
         <Footer />

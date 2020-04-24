@@ -1,0 +1,107 @@
+.content {
+    min-height: 300px;
+    width: 100%;
+    padding: 60px 70px 20px 70px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 500;
+    color: #3A0475;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 30px;
+}
+
+.item_wrapper {
+    width: 100%;
+    display: flex;
+    margin: 50px 0 0 0;
+    flex-direction: column;
+}
+
+.item_row {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.item_image {
+    height: 350px;
+    width: 500px;
+}
+
+.item_content_wrapper {
+    display: flex;
+    position: relative;
+    width: 800px;
+}
+
+.item_content {
+    padding: 0 20px 20px 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    color: #525252;
+    ;
+    max-height: 291px;
+    overflow: hidden;
+
+}
+
+.item_views {
+    position: absolute;
+    bottom: 0;
+    color: #ABABAB;
+    font-size: 16px;
+    left: 40px;
+}
+
+.item_date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #484848;
+    font-size: 20px;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginator {
+    display: flex;
+}
+
+.page_block {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #BFBFBF;
+    font-weight: 800;
+    font-size: 1.3rem;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1); 
+    margin: 70px 5px 50px;  
+    cursor: pointer; 
+    font-family: "1mplus extraBold";
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: #5E239D;
+}

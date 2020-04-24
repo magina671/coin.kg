@@ -23,8 +23,18 @@ const Footer = () => {
           >
             <li>О нас</li>
           </Link>
+          <Link
+            to="/all_news"
+            style={{ textDecoration: "none", color: "white" }}
+          >
           <li>Новости</li>
+          </Link>
+          <Link
+            to="/online_request"
+            style={{ textDecoration: "none", color: "white" }}
+          >
           <li>Онлайн заявка</li>
+          </Link>
         </ul>
       </div>
       <div className={style.references}>
