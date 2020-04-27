@@ -4,6 +4,7 @@ import API from "../../../API";
 import image from "../../../images/bank.svg";
 import DOMPurify from "dompurify"; //защитит от xss атак, так как я использую innerHTML
 import { Link } from "react-router-dom";
+import Calculator from '../calculator';
 
 const CreditInfo = () => {
   const [credits, setCredits] = useState([]);
@@ -35,6 +36,7 @@ const CreditInfo = () => {
           );
         })}
       </div>
+      <Calculator />
     </div>
   );
 };

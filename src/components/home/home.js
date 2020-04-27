@@ -46,7 +46,6 @@ const Home = props => {
       <CreditInfo />
       <HomeNews {...props}/>
       <HelpForm />
-      {/* <Footer /> */}
     </div>
   );
 };
