@@ -2,20 +2,47 @@ import React, { useState } from "react";
 import "./autorization.css";
 import aut_logo from "../../images/autorization.png";
 import { Link } from "react-router-dom";
-import { API, postData } from "../../API";
+import API from "../../API";
+import axios from "axios";
 
-const Autorization = () => {
-  const [login, setLogin] = useState("");
+const Autorization = (props) => {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = event => {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    const data = { login, password };
-    console.log(data);
-    // postData("/Account/Register", data);
-    // props.history.push('/');
-  };
+    const data = { email, password };
+    //1 вариант:
+    API.autorization(data)
+
+    //2 вариант:
+    // let res = await axios.post(
+    //   "https://cors-anywhere.herokuapp.com/https://coinkgtest.herokuapp.com/api/auth/jwt/create/",
+    //   data
+    // );
+    // console.log("handleSubmit -> res", res.data);
+
+    //3 вариант: 
+    // let req = await fetch(
+    //   "https://cors-anywhere.herokuapp.com/https://coinkgtest.herokuapp.com/api/auth/jwt/create/",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(data),
+    //   }
+    // );
+
+    // const res = await req.json();
+    // if (res.access) {
+    //   localStorage.setItem("token", res.access);
+    //   props.history.push("/");
+    // } else {
+    //   alert("перезагрузите страницу и попробуйте ввести данные заново");
+    // }
+  }
 
   return (
     <div className="autorization_wrapper">
@@ -29,10 +56,10 @@ const Autorization = () => {
             type="text"
             required
             placeholder="email"
-            onChange={e => setLogin(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
             required
             placeholder="password"
@@ -46,8 +73,8 @@ const Autorization = () => {
               </Link>
             </span>
           </div>
-          <Link to="/registration" style={{textDecoration: 'none'}}>
-            <p className='regisrt'> Зарегистрироваться </p>
+          <Link to="/registration" style={{ textDecoration: "none" }}>
+            <p className="regisrt"> Зарегистрироваться </p>
           </Link>
         </form>
       </div>

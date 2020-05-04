@@ -21,7 +21,7 @@ const CreditInfo = () => {
           const text = item.content;
           const id = item.id;
           return (
-            <div className={style.content_wrapper}>
+            <div key={id} className={style.content_wrapper}>
               <div className={style.image_circle}>
                 <img className={style.image} src={image} alt="logo" />
               </div>

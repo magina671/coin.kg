@@ -4,12 +4,15 @@ import Header from "../../header";
 import { Title } from "../about-us/about-us";
 import { useDropzone } from "react-dropzone";
 import API from "../../../API";
-import dragImage from '../../../images/dragNdropImage.png';
+import dragImage from "../../../images/dragNdropImage.png";
+import axios from "axios";
 
 const OnlineRequest = () => {
-  const [total, setTotal] = useState(0);
-  const [passport, setPassport] = useState({});
-  const [credit, setCredit] = useState("");
+  const [sum, setSum] = useState(0);
+  const [passport, setPassport] = useState([]);
+  const [product, setProduct] = useState("");
+  const [currency, setCurrency] = useState("СОМ");
+
   //
   //    DROPZONE CONFIGURATION
   //
@@ -92,17 +95,16 @@ const OnlineRequest = () => {
       <div className="container">
         <div {...getRootProps({ style })}>
           <input {...getInputProps()} />
-          <img src={dragImage} alt='dragNdrop' />
+          <img src={dragImage} alt="dragNdrop" />
           <p className={styles.dragTitle}>
-            Перетащите файл и отпустите{" "}
-            <br />
+            Перетащите файл и отпустите <br />
             <button
               type="button"
               className={styles.choose}
               onClick={open}
               onChange={(event) => setPassport(event.target.files)}
             >
-             Или нажмите сюда для загрузки файла
+              Или нажмите сюда для загрузки файла
             </button>
           </p>
         </div>
@@ -118,13 +120,37 @@ const OnlineRequest = () => {
   //      END OF DROPZONE CONFIGURATION
   //
 
+  function getToday() {
+    let today = new Date();
+    const dd = String(today.getDate()).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+
+    return (today = yyyy + "-" + mm + "-" + dd);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    const time = getToday();
 
-    const data = { total, passport, credit, user: 2 };
-    console.log(data);
-    // API.postOnlineRequestInfo(data);
-    // props.history.push('/');
+    let token = localStorage.getItem("token");
+    var formData = new FormData();
+    formData.append("passport", passport);
+    formData.append("sum", sum);
+    formData.append("product", product);
+    formData.append("currency", currency);
+    formData.append("time", time);
+    formData.append("user", 2);
+    axios.post(
+      "https://cors-anywhere.herokuapp.com/https://coinkgtest.herokuapp.com/api/main/credit/",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: "JWT " + token,
+        },
+      }
+    );
   };
 
   return (
@@ -142,12 +168,14 @@ const OnlineRequest = () => {
               <p className={styles.form_title}>Введите ваши данные</p>
               <div className={styles.form_element}>
                 <label htmlFor="credit">Вид кредита</label>
-                <select onChange={(e) => setCredit(e.target.value)}>
+                <select onChange={(e) => setProduct(e.target.value)}>
                   <option value="Кредиты">Кредиты</option>
-                  <option value="Потребительский">Потребительский</option>
-                  <option value="Авто-кредит">Авто-кредит</option>
+                  <option value="Потребительский кредит">
+                    Потребительский
+                  </option>
+                  <option value="Автокредит">Авто-кредит</option>
                   <option value="Агрокредит">Агрокредит</option>
-                  <option value="Кредит на развитие бизнеса">
+                  <option value="Кредит для развития бизнеса">
                     На развитие бизнеса
                   </option>
                   <option value="Ипотека">Ипотека</option>
@@ -160,7 +188,7 @@ const OnlineRequest = () => {
                   type="number"
                   reqiured
                   placeholder="до 100 тыс. сомов"
-                  onChange={(e) => setTotal(+e.target.value)}
+                  onChange={(e) => setSum(+e.target.value)}
                 />
               </div>
               <div className={styles.form_element}>
@@ -176,7 +204,9 @@ const OnlineRequest = () => {
             </div>
             <div className={styles.right}>
               <StyledDropzone />
-              <button type="submit" className={styles.submit}>Отправить</button>
+              <button type="submit" className={styles.submit}>
+                Отправить
+              </button>
             </div>
           </form>
         </div>

@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import HomeNews from "../news/news-home";
 import style from "./home.module.css";
-import API from "../../API";
-import HomeHeader from "./home-header";
+  import HomeHeader from "./home-header";
 import CreditInfo from "./credit-info";
 import HelpForm from "./help-form";
-import Footer from '../footer';
 
 
 const Home = props => {
-  const [news, setNews] = useState([]);
-
-  // useEffect(()=>{
-  // },[]);
-
   return (
     <div className={style.wrapper}>
       <HomeHeader />

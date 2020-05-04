@@ -26,7 +26,7 @@ const HomeNews = (props) => {
       <div className={styles.list}>
         {homeNews.map((item) => {
           return (
-            <div className={styles.list_wrapper}>
+            <div key={item.id} className={styles.list_wrapper}>
               <NewsItem data={item} />
             </div>
           );
