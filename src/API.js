@@ -34,6 +34,7 @@ async function postAuthData(url, data) {
   if (req.data.access) {
     localStorage.setItem("token", req.data.access);
   } else alert("перезагрузите страницу и попробуйте ввести данные заново");
+  return req
 }
 
 export default {
@@ -46,7 +47,8 @@ export default {
   },
   postRegistrData: (data) => postData("/api/auth/users/", data),
   autorization: (data) => {
-    postAuthData("/api/auth/jwt/create/", data);
+    let res = postAuthData("/api/auth/jwt/create/", data);
+    return res;
   },
   feedback: (data) => {
     postTokenData("/api/main/feedback/", data);

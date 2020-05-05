@@ -3,8 +3,10 @@ import NewsItem from "../news-item";
 import styles from "./news-home.module.css";
 import API from "../../../API";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HomeNews = (props) => {
+  const { t, i18n } = useTranslation();
   const [homeNews, setHomeNews] = useState([]);
   useEffect(() => {
     API.getNews().then((res) => {
@@ -16,9 +18,9 @@ const HomeNews = (props) => {
     <div className={styles.wrapper}>
       <div>
         <div className={styles.news_header}>
-          <span>Новости</span>
+  <span>{t('home_news.news')}</span>
           <Link to="/all_news" style={{ textDecoration: "none" }}>
-            <button>Все новости</button>
+            <button>{t('home_news.all_news')}</button>
           </Link>
         </div>
       </div>

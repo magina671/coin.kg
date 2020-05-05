@@ -1,8 +1,10 @@
 import React from "react";
 import style from "./footer.module.css";
 import { Link } from "react-router-dom";
+import {useTranslation } from 'react-i18next'; 
 
 const Footer = () => {
+  const {t, i18n} = useTranslation();
   return (
     <div className={style.wrapper}>
       <div className={style.logo}>
@@ -10,36 +12,36 @@ const Footer = () => {
       </div>
       <div className={style.references}>
         <div className={style.title}>
-          <p>МЕНЮ</p>
+  <p>{t('footer.menu')}</p>
           <div className={style.hr}></div>
         </div>
         <ul className={style.menu}>
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <li>Главная страница</li>
+            <li>{t('footer.main_page')}</li>
           </Link>
           <Link
             to="/about_us"
             style={{ textDecoration: "none", color: "white" }}
           >
-            <li>О нас</li>
+            <li>{t('footer.about_us')}</li>
           </Link>
           <Link
             to="/all_news"
             style={{ textDecoration: "none", color: "white" }}
           >
-          <li>Новости</li>
+          <li>{t('footer.news')}</li>
           </Link>
           <Link
             to="/online_request"
             style={{ textDecoration: "none", color: "white" }}
           >
-          <li>Онлайн заявка</li>
+          <li>{t('footer.online_request')}</li>
           </Link>
         </ul>
       </div>
       <div className={style.references}>
         <div className={style.title}>
-          <p>Контакты</p>
+          <p>{t('footer.contacts')}</p>
           <div className={style.hr}></div>
         </div>
         <ul>
@@ -50,7 +52,7 @@ const Footer = () => {
       </div>
       <div>
         <div className={style.title}>
-          <p>Как нас найти</p>
+          <p>{t('footer.find')}</p>
           <div className={style.hr}></div>
         </div>
         <iframe

@@ -14,7 +14,6 @@ const Autorization = (props) => {
 
     const data = { email, password };
     //1 вариант:
-    API.autorization(data)
 
     //2 вариант:
     // let res = await axios.post(
@@ -23,7 +22,7 @@ const Autorization = (props) => {
     // );
     // console.log("handleSubmit -> res", res.data);
 
-    //3 вариант: 
+    //3 вариант:
     // let req = await fetch(
     //   "https://cors-anywhere.herokuapp.com/https://coinkgtest.herokuapp.com/api/auth/jwt/create/",
     //   {
@@ -35,13 +34,16 @@ const Autorization = (props) => {
     //   }
     // );
 
-    // const res = await req.json();
-    // if (res.access) {
-    //   localStorage.setItem("token", res.access);
-    //   props.history.push("/");
-    // } else {
-    //   alert("перезагрузите страницу и попробуйте ввести данные заново");
-    // }
+    async function checking() {
+      const res = await API.autorization(data);
+      if (res) {
+        localStorage.setItem("token", res.data.access);
+        props.history.push("/");
+      } else {
+        alert("перезагрузите страницу и попробуйте ввести данные заново");
+      }
+    }
+    checking();
   }
 
   return (

@@ -10,6 +10,7 @@ const CreditInfo = () => {
   const [credits, setCredits] = useState([]);
   useEffect(() => {
     API.getCreditsInfo().then(res => {
+    console.log("%c CreditInfo -> res","color: red;", res.data)
       setCredits(res.data);
     });
   }, []);

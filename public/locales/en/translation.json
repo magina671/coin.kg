@@ -1,0 +1,57 @@
+{
+    "header": {
+        "home_page": "Home page",
+        "credits": "Credits",
+        "potreb": "Consumer",
+        "auto": "Auto-credit",
+        "ipoteka": "Mortgage",
+        "business": "For business development",
+        "agro": "Agricultural loan",
+        "news": "News",
+        "about_us": "About us",
+        "login": "Login",
+        "taking_credit": "Get a loan",
+        "easier": "even easier",
+        "online_request": "Online loan application"
+    },
+    "home": {
+        "what_we_do": "What are we doing?",
+        "answer": "We provide a quick loan opportunity, simplifying your life.",
+        "regions": "serving countries",
+        "clients": "clients",
+        "credit_num": "types of loans"
+    },
+    "calculator": {
+        "name": "Credit calculator",
+        "total": "Total",
+        "deadline": "Duration (months)",
+        "payment": "Rate",
+        "result": "Calculation result",
+        "monthly": "Monthly payment ",
+        "overpay": "Loan overpayment",
+        "total_pay": "Total payout",
+        "calculate": "Calculate",
+        "online_request": "Apply for a loan"
+    },
+    "home_news": {
+        "news": "News",
+        "all_news": "All news",
+        "views": "views" 
+    },
+    "help_form":{
+        "title": "Contact us",
+        "name": "Your name",
+        "mail": "Your e-mail",
+        "question": "Your message",
+        "submit": "Submit"
+    },
+    "footer": {
+        "menu": "Menu",
+        "main_page": "Home Page",
+        "about_us": "About us",
+        "news":"News",
+        "online_request":"Online loan app   ",
+        "contacts": "Contacts",
+        "find": "How to find us"
+    }
+}

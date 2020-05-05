@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -10,8 +10,17 @@ import "./fonts/MPLUS1/MPLUS1p-Light.ttf";
 import "./fonts/MPLUS1/MPLUS1p-Medium.ttf";
 import "./fonts/MPLUS1/MPLUS1p-Regular.ttf";
 import "./fonts/MPLUS1/MPLUS1p-Thin.ttf";
+import Spinner from "./components/spinner/spinner";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// import i18n (needs to be bundled ;))
+import "./i18n";
+
+ReactDOM.render(
+  <Suspense fallback={<Spinner />}>
+    <App />
+  </Suspense>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

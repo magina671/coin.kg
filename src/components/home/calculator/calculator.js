@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./calculator.module.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Calculator = () => {
   const [total, setTotal] = useState(0);
@@ -9,6 +10,7 @@ const Calculator = () => {
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [overpaying, setOverpaying] = useState(0);
   const [totalPay, setTotalPay] = useState(0);
+  const { t, i18n } = useTranslation();
 
   function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -33,19 +35,19 @@ const Calculator = () => {
       const monthlyTotal = total / deadline;
       const monthly = monthlyPercent + monthlyTotal;
       setMonthlyPayment(monthly);
-    } else if( total > 100000){
-      alert("Сумма не должна превышать 100 тыс. сомов")
+    } else if (total > 100000) {
+      alert("Сумма не должна превышать 100 тыс. сомов");
     } else {
-      alert('Срок кредита не должен превышать 120 месяцев')
+      alert("Срок кредита не должен превышать 120 месяцев");
     }
   };
 
   return (
     <div className={style.wrapper}>
       <form className={style.form} onSubmit={handleSubmit}>
-        <p className={style.title}>Кредитный калькулятор</p>
+        <p className={style.title}>{t("calculator.name")}</p>
         <div className={style.input_box}>
-          <p className={style.name}>Сумма</p>
+          <p className={style.name}>{t("calculator.total")}</p>
           <input
             type="text"
             pattern="[0-9]{1,6}"
@@ -56,7 +58,7 @@ const Calculator = () => {
           />
           <div className={style.dates}>
             <div>
-              <p className={style.name}>Срок (месяцы)</p>
+              <p className={style.name}>{t("calculator.deadline")}</p>
               <input
                 type="text"
                 pattern="[0-9]{1,3}"
@@ -67,7 +69,7 @@ const Calculator = () => {
               />
             </div>
             <div>
-              <p className={style.name}>Ставка, %</p>
+              <p className={style.name}>{t("calculator.payment")}, %</p>
               <input
                 type="text"
                 pattern="[0-9]{1-2}"
@@ -80,25 +82,25 @@ const Calculator = () => {
             </div>
           </div>
 
-          <p className={`${style.name} ${style.result}`}>Результат расчёта :</p>
+          <p className={`${style.name} ${style.result}`}>{t("calculator.result")} :</p>
           <div className={style.countings_box}>
-            <p>Ежемесячный платеж </p>
+            <p>{t("calculator.monthly")}</p>
             <span>{monthlyPayment}</span>
           </div>
           <div className={style.countings_box}>
-            <p>Переплата по кредиту </p>
+            <p>{t("calculator.overpay")} </p>
             <span>{overpaying}</span>
           </div>
           <div className={style.countings_box}>
-            <p>Общая выплата </p>
+            <p>{t("calculator.total_pay")} </p>
             <span>{totalPay}</span>
           </div>
           <div className={style.buttons}>
             <button className={style.button} type="submit">
-              Рассчитать
+            {t("calculator.calculate")}
             </button>
             <Link to="/online_request" style={{ textDecoration: "none" }}>
-              <button className={style.button}>Оформить кредит</button>
+              <button className={style.button}>{t("calculator.online_request")}</button>
             </Link>
           </div>
         </div>
