@@ -27,7 +27,7 @@ const HelpForm = () => {
               <input
                 type="text"
                 onChange={(e) => setName(e.target.value)}
-                placeholder="ваше имя"
+                placeholder={t('placeholders.your_name')}
                 required
               />
               <span>{t('help_form.mail')}</span>
@@ -43,7 +43,7 @@ const HelpForm = () => {
               <textarea
                 onChange={(e) => setContent(e.target.value)}
                 rows="6"
-                placeholder="Введите сообщение"
+                placeholder={t('placeholders.your_message')}
                 required
               ></textarea>
               <button type="submit">{t('help_form.submit')}</button>

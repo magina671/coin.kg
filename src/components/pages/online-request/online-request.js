@@ -194,7 +194,7 @@ const OnlineRequest = () => {
                   name="total"
                   type="number"
                   reqiured
-                  placeholder="до 100 тыс. сомов"
+                  placeholder={t('placeholders.calc_price')}
                   onChange={(e) => setSum(+e.target.value)}
                 />
               </div>
@@ -204,7 +204,7 @@ const OnlineRequest = () => {
                   name="file"
                   type="text"
                   reqiured
-                  placeholder="документ"
+                  placeholder={t('placeholders.passport')}
                   value={passport.name}
                 />
               </div>

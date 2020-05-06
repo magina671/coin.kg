@@ -2,16 +2,23 @@ import React, { useEffect, useState } from "react";
 import styles from "./one-news.module.css";
 import Header from "../../header";
 import API from "../../../API";
+import { getCurrentLng } from "../../../i18n";
 
 const OneNewsPage = (props) => {
   const [data, setData] = useState({});
-  console.log("OneNewsPage -> data", data)
   const currentId = props.match.params.id;
+  const currentLng = getCurrentLng();
+  const title =
+    currentLng == "en-US"
+      ? data.content_en
+      : currentLng == "kg"
+      ? data.content_kg
+      : data.content_ru;
   useEffect(() => {
     API.getSelectedNews(currentId).then((res) => {
       setData(res.data);
     });
-    document.getElementById('single_news_container').innerHTML = data.content
+    document.getElementById('single_news_container').innerHTML = title
   }, [data]);
 
   return (

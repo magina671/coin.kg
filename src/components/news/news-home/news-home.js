@@ -18,9 +18,9 @@ const HomeNews = (props) => {
     <div className={styles.wrapper}>
       <div>
         <div className={styles.news_header}>
-  <span>{t('home_news.news')}</span>
+          <span>{t("home_news.news")}</span>
           <Link to="/all_news" style={{ textDecoration: "none" }}>
-            <button>{t('home_news.all_news')}</button>
+            <button>{t("home_news.all_news")}</button>
           </Link>
         </div>
       </div>

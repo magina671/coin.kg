@@ -97,5 +97,11 @@
     },
     "credit_info": {
         "title": "Условия и возможности"
+    },
+    "placeholders": {
+        "your_name": "ваше имя",
+        "your_message": "Введите сообщение",
+        "calc_price": "не больше 100 тыс.",
+        "passport": "Документ"
     }
 }

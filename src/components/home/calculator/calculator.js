@@ -51,7 +51,7 @@ const Calculator = () => {
           <input
             type="text"
             pattern="[0-9]{1,6}"
-            placeholder="не больше 100 тыс."
+            placeholder={t('placeholders.calc_price')}
             className={style.total}
             required
             onChange={(e) => setTotal(e.target.value)}

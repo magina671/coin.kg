@@ -69,7 +69,7 @@
         "login": "Sign in",
         "registr": "Sign up"
     },
-    "registration":{
+    "registration": {
         "name": "Name",
         "surname": "Surname",
         "patronymic": "Patronymic",
@@ -97,5 +97,11 @@
     },
     "credit_info": {
         "title": "Terms and conditions"
+    },
+    "placeholders": {
+        "your_name": "your name",
+        "your_message": "your message",
+        "calc_price": "no more than 100 thousand",
+        "passport": "passport"
     }
 }
