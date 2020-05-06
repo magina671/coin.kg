@@ -6,14 +6,16 @@ import API from "../../../API";
 import NewsItem from "../news-item/news-item";
 import { editDateFromBack } from "..";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const AllNews = () => {
   const [perPage, setPerPage] = useState(5);
   const [totalProducts, setTotalProducts] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const [firstNews, setFirstNews] = useState([]);
-  console.log("AllNews -> firstNews", firstNews);
   const [otherNews, setOtherNews] = useState([]);
   const finalDate = editDateFromBack(firstNews.publish);
+  const { t, i18n } = useTranslation();
 
   //pagination
   useEffect(() => {
@@ -36,7 +38,7 @@ const AllNews = () => {
     <div className={style.wrapper}>
       <Header />
       <div className={style.content}>
-        <p className={style.title}>Новости</p>
+  <p className={style.title}>{t('home_news.news')}</p>
         <div className={style.item_wrapper}>
           <Link
             to={`/one_news/${firstNews.id}`}
@@ -57,7 +59,7 @@ const AllNews = () => {
                   всех помещений и клиентских зон.
                 </p>
                 <span className={style.item_views}>
-                  {firstNews.views} просмотров
+                  {firstNews.views} {t('home_news.views')}
                 </span>
                 <span className={style.item_date}>{finalDate}</span>
               </div>

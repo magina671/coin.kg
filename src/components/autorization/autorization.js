@@ -3,9 +3,10 @@ import "./autorization.css";
 import aut_logo from "../../images/autorization.png";
 import { Link } from "react-router-dom";
 import API from "../../API";
-import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const Autorization = (props) => {
+  const { t, i18n } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -53,7 +54,7 @@ const Autorization = (props) => {
           <img src={aut_logo} alt="logo" />
         </div>
         <form onSubmit={handleSubmit}>
-          <span className="aut_header_name_suka">Авторизация</span>
+          <span className="aut_header_name_suka">{t("auth.title")}</span>
           <input
             type="text"
             required
@@ -66,17 +67,17 @@ const Autorization = (props) => {
             required
             placeholder="password"
           />
-          <button type="submit">Login</button>
-          <div className="aut_forgot_text">
+          <button type="submit">{t("auth.login")}</button>
+          {/* <div className="aut_forgot_text">
             <span className="aut_forgor_span">
               Забыли
               <Link>
                 <span> Логин/Пароль? </span>
               </Link>
             </span>
-          </div>
+          </div> */}
           <Link to="/registration" style={{ textDecoration: "none" }}>
-            <p className="regisrt"> Зарегистрироваться </p>
+            <button className="regisrt"> {t("auth.registr")} </button>
           </Link>
         </form>
       </div>

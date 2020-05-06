@@ -36,9 +36,9 @@
     "home_news": {
         "news": "News",
         "all_news": "All news",
-        "views": "views" 
+        "views": "views"
     },
-    "help_form":{
+    "help_form": {
         "title": "Contact us",
         "name": "Your name",
         "mail": "Your e-mail",
@@ -49,9 +49,50 @@
         "menu": "Menu",
         "main_page": "Home Page",
         "about_us": "About us",
-        "news":"News",
-        "online_request":"Online loan app   ",
+        "news": "News",
+        "online_request": "Online loan app   ",
         "contacts": "Contacts",
         "find": "How to find us"
+    },
+    "about_us": {
+        "who_we": "Who are we",
+        "slogan": "First Micro-Finance Company founded by Aga Khan Microfinance Agency, headquartered in Geneva",
+        "title_1": "Aga Khan Development Division.",
+        "desc_1": "The first Micro-Finance Company began its work in 2003 as part of a project in the remote regions of Alai and Chon-Alai. In October 2006, it was officially registered as a microcredit company. In September 2017, the company was transformed into a microfinance company and received a license from the National Bank of the Kyrgyz Republic.",
+        "title_2": "The largest microfinance organization in the country",
+        "desc_2": "A stable path for 15 years of development from the Aga Khan Micro-Financing Program to successful transformation into one of the largest microfinance organizations in the country with total assets of more than 1 billion soms and a client base of more than 22 thousand people.",
+        "title_3": "Branches and strategic areas",
+        "desc_3": "15 branches, 10 of which are in Osh oblast and 3 in Naryn, 1 in Bishkek and 1 in Jalal-Abad. Microloans are issued for the development of livestock and agriculture, trade, small and medium-sized businesses, improving housing conditions and education."
+    },
+    "auth": {
+        "title": "Login",
+        "login": "Sign in",
+        "registr": "Sign up"
+    },
+    "registration":{
+        "name": "Name",
+        "surname": "Surname",
+        "patronymic": "Patronymic",
+        "address": "Address",
+        "phone": "Phone",
+        "mail": "Email",
+        "password": "Password",
+        "submit": "Sign up"
+    },
+    "online_request": {
+        "title": "Online loan application",
+        "form_title": "Enter your details",
+        "credit_type": "Type of loan",
+        "basic_type": "Loans",
+        "potreb": "Consumer",
+        "auto": "Auto-credit",
+        "ipoteka": "Mortgage",
+        "business": "For business development",
+        "agro": "Agricultural loan",
+        "total": "Amount",
+        "passport": "Passport",
+        "submit": "Send",
+        "drop_desc": "Drag the file and release",
+        "drop_btn": " Or click here to download the file."
     }
 }

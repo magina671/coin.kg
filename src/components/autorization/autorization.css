@@ -108,12 +108,12 @@
     text-decoration: none;
     color: #57b846;
 }
-.regisrt{
-    outline: none;
-    text-decoration: none;
-    color: #666666;
-    padding-left: 65px;
+
+.regisrt {
+    background: #DC143C !important;
 }
-.regisrt:hover{
-    color: #57b846;
+
+.regisrt:hover {
+    background-color: #212529 !important;
+    color: white;
 }

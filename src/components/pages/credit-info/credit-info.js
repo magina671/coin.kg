@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import style from "./credit-info.module.css";
 import Header from "../../header";
 import jsonData from "./content/db.json";
+import i18n from "../../../i18n";
 
-const CreditInfo = props => {
+const CreditInfo = (props) => {
   const [state, setState] = useState({
     id: 0,
     title: "Агрокредит",
@@ -27,20 +28,19 @@ const CreditInfo = props => {
     downBottomLeft:
       "Комиссия за выдачу кредитных средств - от 0,5 % от суммы кредита",
     topImage: "./content/agro-top.png",
-    bottomImage: "./content/agro-bottom.png"
+    bottomImage: "./content/agro-bottom.png",
   });
 
+  console.log("%c i18n", "color:red;", i18n);
   useEffect(() => {
     const creditData = JSON.parse(JSON.stringify(jsonData.credits));
     const currentCredit = +props.match.params.id;
-    creditData.map(credit => {
+    creditData.map((credit) => {
       if (credit.id == currentCredit) {
         setState(credit);
       }
     });
   }, [+props.match.params.id]);
-  console.log(state);
-  
 
   return (
     <div className={style.wrapper}>

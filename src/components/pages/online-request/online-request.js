@@ -6,13 +6,14 @@ import { useDropzone } from "react-dropzone";
 import API from "../../../API";
 import dragImage from "../../../images/dragNdropImage.png";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const OnlineRequest = () => {
   const [sum, setSum] = useState(0);
   const [passport, setPassport] = useState([]);
   const [product, setProduct] = useState("");
   const [currency, setCurrency] = useState("СОМ");
-
+  const { t, i18n } = useTranslation();
   //
   //    DROPZONE CONFIGURATION
   //
@@ -97,14 +98,14 @@ const OnlineRequest = () => {
           <input {...getInputProps()} />
           <img src={dragImage} alt="dragNdrop" />
           <p className={styles.dragTitle}>
-            Перетащите файл и отпустите <br />
+            {t("online_request.drop_desc")} <br />
             <button
               type="button"
               className={styles.choose}
               onClick={open}
               onChange={(event) => setPassport(event.target.files)}
             >
-              Или нажмите сюда для загрузки файла
+              {t("online_request.drop_btn")}
             </button>
           </p>
         </div>
@@ -156,7 +157,7 @@ const OnlineRequest = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
-      <Title text={"Онлайн заявка на кредит"} />
+      <Title text={t("online_request.title")} />
       <div className={styles.content_wrapper}>
         <div className={styles.white_box}></div>
         <div className={styles.pink_image}>
@@ -165,24 +166,30 @@ const OnlineRequest = () => {
         <div className={styles.content}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.left}>
-              <p className={styles.form_title}>Введите ваши данные</p>
+              <p className={styles.form_title}>
+                {t("online_request.form_title")}
+              </p>
               <div className={styles.form_element}>
-                <label htmlFor="credit">Вид кредита</label>
+                <label htmlFor="credit">
+                  {t("online_request.credit_type")}
+                </label>
                 <select onChange={(e) => setProduct(e.target.value)}>
-                  <option value="Кредиты">Кредиты</option>
+                  <option value="Кредиты">
+                    {t("online_request.basic_type")}
+                  </option>
                   <option value="Потребительский кредит">
-                    Потребительский
+                    {t("online_request.potreb")}
                   </option>
-                  <option value="Автокредит">Авто-кредит</option>
-                  <option value="Агрокредит">Агрокредит</option>
+                  <option value="Автокредит">{t("online_request.auto")}</option>
+                  <option value="Агрокредит">{t("online_request.agro")}</option>
                   <option value="Кредит для развития бизнеса">
-                    На развитие бизнеса
+                    {t("online_request.business")}
                   </option>
-                  <option value="Ипотека">Ипотека</option>
+                  <option value="Ипотека">{t("online_request.ipoteka")}</option>
                 </select>
               </div>
               <div className={styles.form_element}>
-                <label htmlFor="total">Сумма</label>
+                <label htmlFor="total">{t("online_request.total")}</label>
                 <input
                   name="total"
                   type="number"
@@ -192,7 +199,7 @@ const OnlineRequest = () => {
                 />
               </div>
               <div className={styles.form_element}>
-                <label htmlFor="document">Документ</label>
+                <label htmlFor="document">{t("online_request.passport")}</label>
                 <input
                   name="file"
                   type="text"
@@ -205,7 +212,7 @@ const OnlineRequest = () => {
             <div className={styles.right}>
               <StyledDropzone />
               <button type="submit" className={styles.submit}>
-                Отправить
+                {t("online_request.submit")}
               </button>
             </div>
           </form>
