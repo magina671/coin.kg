@@ -3,6 +3,7 @@ import style from "./credit-info.module.css";
 import Header from "../../header";
 import jsonData from "./content/db.json";
 import i18n from "../../../i18n";
+import { useTranslation } from "react-i18next";
 
 const CreditInfo = (props) => {
   const [state, setState] = useState({
@@ -30,24 +31,32 @@ const CreditInfo = (props) => {
     topImage: "./content/agro-top.png",
     bottomImage: "./content/agro-bottom.png",
   });
+  const [lang, setLang] = useState('"ru-RU"');
+  const currentLang = localStorage.getItem("i18nextLng");
+  const { t, i18n } = useTranslation();
 
-  console.log("%c i18n", "color:red;", i18n);
   useEffect(() => {
+    setLang(currentLang);
     const creditData = JSON.parse(JSON.stringify(jsonData.credits));
+    let filterData = [...creditData];
+
     const currentCredit = +props.match.params.id;
-    creditData.map((credit) => {
-      if (credit.id == currentCredit) {
+    let filtered = filterData.filter(
+      (data) => String(data.language) == String(lang)
+    );
+    filtered.map((credit) => {
+      if (credit.language == lang && credit.id == currentCredit) {
         setState(credit);
       }
     });
-  }, [+props.match.params.id]);
+  }, [+props.match.params.id, lang, currentLang]);
 
   return (
     <div className={style.wrapper}>
       <Header />
       <div className={style.title_wrapper}>
         <p>{state.title}</p>
-        <span>Условия и возможности</span>
+        <span>{t("credit_info.title")}</span>
       </div>
       <div className={style.content_wrapper}>
         <div className={style.upTopLeft}>{state.upTopLeft}</div>

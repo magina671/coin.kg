@@ -94,5 +94,8 @@
         "submit": "Send",
         "drop_desc": "Drag the file and release",
         "drop_btn": " Or click here to download the file."
+    },
+    "credit_info": {
+        "title": "Terms and conditions"
     }
 }

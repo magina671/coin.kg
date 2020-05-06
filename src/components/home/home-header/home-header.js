@@ -12,6 +12,7 @@ export const HeaderContent = () => {
 
   function handleChangeLang(lang) {
     i18n.changeLanguage(lang);
+    window.location.reload(true);
   }
 
   return (
