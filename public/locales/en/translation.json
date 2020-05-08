@@ -12,7 +12,8 @@
         "login": "Login",
         "taking_credit": "Get a loan",
         "easier": "even easier",
-        "online_request": "Online loan application"
+        "online_request": "Online loan application",
+        "success_story": "History of success"
     },
     "home": {
         "what_we_do": "What are we doing?",
@@ -103,5 +104,13 @@
         "your_message": "your message",
         "calc_price": "no more than 100 thousand",
         "passport": "passport"
+    },
+    "success_story": {
+        "title": "customer reviews and stories",
+        "slogan": "Agricultural loans on favorable terms",
+        "advantages": "Agricultural loan from the First IFC for a successful future",
+        "story_first": "Akylbek decided to develop his farm and made a bold decision - to take a loan through the Agrocredit line in the amount of fifteen thousand soms. Things immediately went uphill, which allowed the farmer to quickly repay the loan. Thus, Akylbek secured a good start for an impeccable credit history.",
+        "user_story": "«Having started the construction of a new house for my family, I really wanted to make it warm, bright and comfortable. When I shared my plans with the loan officers of the First Micro-Finance Company, they talked about the special loan product “Mortgage“»",
+        "user_name": "Ilya Kim - our client"
     }
 }

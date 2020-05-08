@@ -141,9 +141,8 @@ const OnlineRequest = () => {
     formData.append("product", product);
     formData.append("currency", currency);
     formData.append("time", time);
-    formData.append("user", 2);
     axios.post(
-      "https://cors-anywhere.herokuapp.com/https://coinkgtest.herokuapp.com/api/main/credit/",
+      "https://coinkgtest.herokuapp.com/api/main/credit/",
       formData,
       {
         headers: {
@@ -194,7 +193,7 @@ const OnlineRequest = () => {
                   name="total"
                   type="number"
                   reqiured
-                  placeholder={t('placeholders.calc_price')}
+                  placeholder={t("placeholders.calc_price")}
                   onChange={(e) => setSum(+e.target.value)}
                 />
               </div>
@@ -204,7 +203,7 @@ const OnlineRequest = () => {
                   name="file"
                   type="text"
                   reqiured
-                  placeholder={t('placeholders.passport')}
+                  placeholder={t("placeholders.passport")}
                   value={passport.name}
                 />
               </div>

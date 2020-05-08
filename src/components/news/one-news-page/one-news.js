@@ -5,28 +5,26 @@ import API from "../../../API";
 import { getCurrentLng } from "../../../i18n";
 
 const OneNewsPage = (props) => {
-  const [data, setData] = useState({});
   const currentId = props.match.params.id;
   const currentLng = getCurrentLng();
-  const title =
-    currentLng == "en-US"
-      ? data.content_en
-      : currentLng == "kg"
-      ? data.content_kg
-      : data.content_ru;
+
   useEffect(() => {
     API.getSelectedNews(currentId).then((res) => {
-      setData(res.data);
+      const title =
+        currentLng == "en-US"
+          ? res.data.content_en
+          : currentLng == "kg"
+          ? res.data.content_kg
+          : res.data.content_ru;
+      console.log("%c OneNewsPage -> title", "color:red", title);
+      document.getElementById("single_news_container").innerHTML = title;
     });
-    document.getElementById('single_news_container').innerHTML = title
-  }, [data]);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
       <Header />
-      <div id='single_news_container' className={styles.content}>
-
-      </div>
+      <div id="single_news_container" className={styles.content}></div>
     </div>
   );
 };

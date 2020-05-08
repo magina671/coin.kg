@@ -14,7 +14,6 @@ const AllNews = () => {
   const [totalProducts, setTotalProducts] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const [firstNews, setFirstNews] = useState([]);
-  console.log("AllNews -> firstNews", firstNews);
   const [otherNews, setOtherNews] = useState([]);
   const finalDate = editDateFromBack(firstNews.publish);
   const { t, i18n } = useTranslation();

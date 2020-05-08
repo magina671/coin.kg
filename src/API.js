@@ -2,7 +2,7 @@ import Axios from "axios";
 
 const http = Axios.create({
   baseURL:
-    "https://cors-anywhere.herokuapp.com/https://coinkgtest.herokuapp.com",
+    "https://coinkgtest.herokuapp.com",
 });
 
 let token;

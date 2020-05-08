@@ -44,6 +44,26 @@
     cursor: pointer;
 }
 
+.active_lang,
+.inactive_lang {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14.4px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    color: #FCFCFC;
+    padding: 0 10px;
+
+}
+
+.active_lang {
+    opacity: 0.8;
+}
+
+.inactive_lang {
+    opacity: 0.2;
+}
+
 .flags {
     display: flex;
     width: 200px;
@@ -140,9 +160,11 @@
     margin: 0;
     font-size: 100%;
 }
-.first{
+
+.first {
     width: 200px !important;
 }
+
 .menu li {
     list-style: none;
     float: left;
@@ -166,7 +188,7 @@
     left: 0;
     top: 45px;
     z-index: 999;
-    padding: 15px 0 0  0;
+    padding: 15px 0 0 0;
 }
 
 .menu li ul li {
@@ -193,7 +215,7 @@
     display: block;
 }
 
-.menu li:hover ul li:hover{
+.menu li:hover ul li:hover {
     background: gold;
     z-index: 2000;
 }
