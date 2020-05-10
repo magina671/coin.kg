@@ -9,7 +9,7 @@ const HomeNews = (props) => {
   const { t, i18n } = useTranslation();
   const [homeNews, setHomeNews] = useState([]);
   useEffect(() => {
-    API.getNews().then((res) => {
+    API.getNews(0,4).then((res) => {
       setHomeNews(res.data.results);
     });
   }, []);

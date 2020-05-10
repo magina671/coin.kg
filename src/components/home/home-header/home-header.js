@@ -6,16 +6,21 @@ import russian from "../../../images/russia.svg";
 import kyrg from "../../../images/kyrgyzstan.svg";
 import Header from "../../header";
 import { useTranslation } from "react-i18next";
-import {getCurrentLng} from '../../../i18n';
+import { getCurrentLng } from "../../../i18n";
 
 export const HeaderContent = () => {
   const { t, i18n } = useTranslation();
-  const [verify,setVerify] = useState(false);
-  const currentToken = localStorage.getItem('token')
+  const [verify, setVerify] = useState(false);
+  const currentToken = localStorage.getItem("token");
 
   function handleChangeLang(lang) {
     i18n.changeLanguage(lang);
     window.location.reload(true);
+  }
+
+  function handleExit() {
+    window.location.reload(true);
+    localStorage.removeItem("token");
   }
 
   return (
@@ -64,9 +69,6 @@ export const HeaderContent = () => {
         </li>
       </ul>
       <div className={style.flags}>
-        {/* <LanguagePicker text={"EN"} lang={"en-US"} />
-        <LanguagePicker text={"RU"} lang={"ru-RU"} />
-        <LanguagePicker text={"KG"} lang={"kg"} /> */}
         <img
           src={britain}
           alt="english-language"
@@ -83,31 +85,18 @@ export const HeaderContent = () => {
           onClick={() => handleChangeLang("kg")}
         />
       </div>
-      {}
-      <Link to="/autorization">
-        <button className={style.login}>{t("header.login")}</button>
-      </Link>
+      {currentToken ? (
+        <button className={style.login} onClick={handleExit}>
+          {t("header.exit")}
+        </button>
+      ) : (
+        <Link to="/autorization">
+          <button className={style.login}>{t("header.login")}</button>
+        </Link>
+      )}
     </div>
   );
 };
-
-// const LanguagePicker = (props) => {
-//   const currentLang = getCurrentLng();
-
-//   function toggleClass() {
-//     const { t, i18n } = useTranslation();
-//     i18n.changeLanguage(props.lang);
-//     window.location.reload(true);
-//   }
-//     return (
-//       <div
-//         className={currentLanguage ? style.active_lang : style.inactive_lang}
-//         onClick={toggleClass}
-//       >
-//         <p>{props.text}</p>
-//       </div>
-//     );
-// }
 
 const HomeHeader = (props) => {
   const { t, i18n } = useTranslation();

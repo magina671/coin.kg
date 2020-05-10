@@ -51,7 +51,7 @@ export default {
     return res;
   },
   feedback: (data) => {
-    postTokenData("/api/main/feedback/", data);
+    postData("/api/main/feedback/", data);
   },
 };
 

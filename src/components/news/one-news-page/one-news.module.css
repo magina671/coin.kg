@@ -1,8 +1,45 @@
-.content{
+.content_wrapper {
+    margin: 100px auto;
     max-width: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px auto;
     flex-direction: column;
+    font-family: '1mplus';
+    position: relative;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 50px;
+    color: #3A0475;
+}
+
+.views {
+    position: absolute;
+    font-size: 14px;
+    line-height: 27px;
+    color: #ABABAB;
+    bottom: 0;
+    left: 0;
+}
+
+.date {
+    position: absolute;
+    color: #484848;
+    font-size: 16px;
+    bottom: 0;
+    right: 0;
+}
+
+.content {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 2;
+    font-size: 20px;
+    color: #525252;
 }

@@ -9,6 +9,7 @@ const HelpForm = () => {
   const [content, setContent] = useState("");
   const [phone, setPhone] = useState("+996777123456");
   const { t, i18n } = useTranslation();
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
