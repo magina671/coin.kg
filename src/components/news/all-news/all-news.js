@@ -66,8 +66,8 @@ const AllNews = () => {
               />
               <div className={style.item_content_wrapper}>
                 <p className={style.item_content}>
-                  {/* {title} */}
-                  {fake}
+                  {title}
+                  {/* {fake} */}
                   </p>
                 <span className={style.item_views}>
                   {firstNews.views} {t("home_news.views")}
